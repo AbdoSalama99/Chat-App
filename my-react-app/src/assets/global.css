@@ -1,0 +1,41 @@
+/* // css code needed for landing page to keep landing.jsx a littel clean */
+/* ////////////////////////////// */
+.custom-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  background-color: white;
+}
+
+.main-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(75 85 99);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  max-width: 100%;
+  padding: 16px;
+}
+
+@media (min-width: 600px) {
+  .main-div {
+    margin: 48px 64px 0px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .custom-grid {
+    grid-template-columns: 3fr 2fr;
+    background-color: #3498db;
+  }
+  .main-div {
+    margin: 48px 0px 0px 64px;
+    border-top-right-radius: 0px;
+  }
+}
+
+.display {
+  transform: translateY(-100%);
+}
