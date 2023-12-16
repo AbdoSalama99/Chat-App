@@ -20,7 +20,7 @@ const Chat = () => {
     useContext(UserContext)
 
   const connectToWs = () => {
-    const ws = new WebSocket('ws://localhost:5100/websocket')
+    const ws = new WebSocket('wss://localhost:5100/websocket')
     setws(ws)
     ws.addEventListener('message', handleMessage)
     ws.addEventListener('close', () => {
