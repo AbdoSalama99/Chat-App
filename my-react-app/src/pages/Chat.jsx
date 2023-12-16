@@ -20,7 +20,16 @@ const Chat = () => {
     useContext(UserContext)
 
   const connectToWs = () => {
-    const ws = new WebSocket('wss://localhost:5100/websocket')
+    const hostname = window.location.hostname
+    const port = window.location.port
+    const protocol = window.location.protocol === 'https:' ? 'wss://' : 'ws://'
+
+    // Check if the port is explicitly specified, otherwise use a default
+    const portSuffix = port ? `:${port}` : ''
+
+    const websocketUrl = `${protocol}${hostname}${portSuffix}/websocket`
+
+    const ws = new WebSocket(websocketUrl)
     setws(ws)
     ws.addEventListener('message', handleMessage)
     ws.addEventListener('close', () => {
