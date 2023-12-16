@@ -64,6 +64,7 @@ const Chat = () => {
     } else if ('text' in messageData) {
       setMyMessages((prev) => [...prev, { ...messageData }])
     }
+    return true
   }
 
   // convert people from arr to obj and store it
@@ -114,6 +115,7 @@ const Chat = () => {
         _id: Date.now(),
       },
     ])
+    return true
   }
 
   // auto scrolling
