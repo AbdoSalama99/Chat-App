@@ -6,14 +6,14 @@ import chatImg from '../assets/imgs/chatimg.jpg'
 const LandingPage = () => {
   return (
     <div className='flex flex-wrap items-center justify-items-center h-screen w-screen lg:bg-blue-300 '>
-      <div className='w-full h-full max-h-screen flex flex-col items-center justify-items-center p-[40px] rounded-2xl lg:p-[25px] bg-gray-500 lg:w-1/2 lg:mr-0 lg:mx-auto  lg:rounded-tr-none lg:rounded-br-none lg:p-[35px] lg:h-[550px] lg:m-[50px]'>
+      <div className='w-full h-full max-h-screen flex flex-col items-center justify-items-center p-[40px] rounded-2xl lg:p-[25px] bg-gray-500 lg:w-1/2 lg:mr-0 lg:mx-auto  lg:rounded-tr-none lg:rounded-br-none lg:p-[35px] lg:h-[550px] lg:m-[50px] '>
         <div className='text-center max-w-full  mb-[32px]'>
           <h1 className='text-2xl font-bold text-white lg:text-4xl'>
             <span className='text-[#3498db]'>Join</span> Our{' '}
             <span className='text-[#3498db]'>Chat</span> Community
           </h1>
           <br />
-          <p className='text-xl font-bold text-gray-300 leading-8'>
+          <p className='text-xl font-bold text-gray-400 leading-8'>
             Our community help you to commnicate with alot of people to make
             friends{' '}
           </p>
