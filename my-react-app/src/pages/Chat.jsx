@@ -258,7 +258,7 @@ const Chat = () => {
           'min-h-screen bg-blue-300  flex flex-col p-2 overflow-y-scroll sm:col-end-5 sm:col-start-2'
         }
       >
-        {/* messages */}
+        {/* messages     */}
         <div className=' flex-grow w-full p-2  '>
           {!selectedUserId ? (
             <div className='text-2xl text-gray-600 m-auto text-center'>
