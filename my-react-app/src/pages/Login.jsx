@@ -37,7 +37,7 @@ const Login = () => {
       onSubmit={handlerSubmit}
       className='bg-[#3498db] h-screen  w-full flex items-center justify-center'
     >
-      <div className='w-[350px] p-[30px] flex flex-col items-center justify-center bg-white shadow-md rounded  '>
+      <div className='w-[350px] max-w-full p-[30px] flex flex-col items-center justify-center bg-white shadow-md rounded  '>
         <div className='flex flex-col justify-center items-center gap-2 mb-[50px]'>
           <FaUser className='text-[60px] text-[#3498db] ' />
           <p className=' text-2xl text-[#3498db]'>Login</p>
