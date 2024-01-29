@@ -172,6 +172,13 @@ const Chat = () => {
       {/* chats info */}
       <div className='h-full sm:col-end-2'>
         <div className='z-40 bg-white fixed w-full text-lg text-gray-600 p-4 flex  items-center justify-between border-2 border-gray-300 shadow h-[10vh] sm:w-1/4 '>
+          <button
+            onClick={handleChatsMenuClick}
+            className='text-white bg-blue-500 p-2 text-xl rounded-md sm:hidden'
+          >
+            chats menu
+          </button>
+
           <div className='flex items-center gap-2'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -187,16 +194,11 @@ const Chat = () => {
                 d='M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z'
               />
             </svg>
-            <p className='text-2xl text-[#3498db] font-bold'>MernChat</p>
+            <p className='text-xl text-[#3498db] font-bold hidden sm:block'>
+              MernChat
+            </p>
           </div>
-          <button
-            onClick={handleChatsMenuClick}
-            className='text-white bg-blue-500 p-2 text-xl rounded-md sm:hidden'
-          >
-            chats menu
-          </button>
         </div>
-
         <div className='h-[100vh]'>
           <div className='flex flex-col justify-between h-full '>
             {/* online and offline people */}
@@ -271,7 +273,7 @@ const Chat = () => {
                   <div className='grid ' key={message._id}>
                     <p
                       className={
-                        'pt-2 pb-2 pl-4 pr-4 mb-4 text-center w-fit rounded text-[18px] ' +
+                        'pt-2 pb-2 pl-4 pr-4 mb-4 text-center w-fit rounded text-[13px] sm:text-[16px] ' +
                         (message.sender === loggingId
                           ? 'bg-blue-600 text-white justify-self-end'
                           : 'bg-gray-400 text-white')
@@ -297,7 +299,7 @@ const Chat = () => {
                 value={newTextMsg}
                 onChange={(e) => setNewTextMsg(e.target.value)}
                 placeholder='write the message'
-                className='bg-white flex-grow border rounded-sm p-2 outline-0 '
+                className='bg-white flex-grow border rounded-sm p-2 outline-0 w-[50px]'
               />
 
               <button
